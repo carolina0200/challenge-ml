@@ -1,0 +1,8 @@
+<div *ngIf="items">
+    <div *ngFor="let item of items">
+        <img src="{{item.picture}}" alt="">
+        <div>{{item.price}}</div>
+        <div>{{item.title}}</div>
+        <div>{{item.freeShipping}}</div>
+    </div>
+</div>

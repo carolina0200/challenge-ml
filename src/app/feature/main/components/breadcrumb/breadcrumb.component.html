@@ -1,0 +1,6 @@
+<div class="breadcrumbs" *ngIf="categories$">
+    <span *ngFor="let categorie of categories$ | async; let last = last">
+        <span *ngIf="!last else lastest">{{categorie}} > </span>
+        <ng-template #lastest><strong>{{categorie}}</strong></ng-template> 
+    </span>
+</div>

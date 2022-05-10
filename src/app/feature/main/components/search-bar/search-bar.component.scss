@@ -1,0 +1,17 @@
+.search-bar-container {
+    background-color: #FFE600;
+
+    .form-control {
+        border: none;
+        &:focus {
+            color: #333333;
+            box-shadow: none;
+        }
+    }
+    
+    .input-group-text {
+        border: none;
+        color: #333333;
+        background-color: #eeeeee;
+    }
+}

@@ -7,12 +7,18 @@ import { join } from 'path';
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+import { SearchRoute } from 'api/routes/search-route';
+import { ItemRoute } from 'api/routes/item-route';
+import *  as bodyParser from 'body-parser';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/challenge-meli/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+
+  server.use(bodyParser.json());
+  server.use(bodyParser.urlencoded({ extended: true }));
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -28,6 +34,12 @@ export function app(): express.Express {
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
+
+  const searchRoute: SearchRoute = new SearchRoute();
+  searchRoute.searchRoute(server);
+  
+  const itemRoute: ItemRoute = new ItemRoute();
+  itemRoute.ItemRoute(server);
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {

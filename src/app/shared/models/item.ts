@@ -11,6 +11,7 @@ export interface IItemDetail {
     title: string,
     price: IPrice,
     picture: string,
+    address: string,
     condition: string,
     freeShipping: boolean,
     soldQuantity?: number,
