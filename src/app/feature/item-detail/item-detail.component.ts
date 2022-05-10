@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { firstValueFrom, lastValueFrom } from 'rxjs';
-import { updateCategories } from 'src/app/core/store/actions/categories.actions';
+import { firstValueFrom } from 'rxjs';
 import { State } from 'src/app/core/store/store';
-import { IItem, IItemDetail } from 'src/app/shared/models/item';
+import { IItemDetail } from 'src/app/shared/models/item';
 import { ItemDetailService } from './services/item-detail.service';
 
 @Component({

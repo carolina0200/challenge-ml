@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { firstValueFrom, lastValueFrom } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
 import { IItemDetail } from 'src/app/shared/models/item';
 import { ItemsService } from './services/items.service';
 
