@@ -1,10 +1,11 @@
+@import '/src/theme/variables';
+
 .main-container {
-    background-color: #EEEEEE;
-    
+    background-color: $gray-100; 
 }
 
 .inner-container {
-    background-color: #FFFFFF;
-    border-radius: 4px;
-    margin-bottom: 16px;
+    background-color: $light;
+    border-radius: $border-radius-100;
+    margin-bottom: $font-size-300;
 }

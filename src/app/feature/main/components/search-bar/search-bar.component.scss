@@ -1,18 +1,24 @@
-.search-bar-container {
-    background-color: #FFE600;
+@import '/src/theme/variables';
 
-    .form-control {
+.search {
+    &__container {
+        background-color: $primary;
+    }
+
+    &__input {
         border: none;
         &:focus {
-            color: #333333;
+            color: $gray-400;
             box-shadow: none;
         }
     }
-    
-    .input-group-text {
+
+    &__button {
         border: none;
-        color: #333333;
-        background-color: #eeeeee;
-        cursor: pointer;
+        color: $gray-400;
+        background-color: $gray-100;
+        &:focus {
+            box-shadow: none;
+        }
     }
 }

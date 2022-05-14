@@ -1,0 +1,44 @@
+@import '/src/theme/variables';
+
+.item {
+    &__container {
+        margin: $spacing-200 $spacing-200 0 0;
+    }
+
+    &__condition {
+        font-size: $font-size-200;
+        margin-bottom: $spacing-100;
+    }
+
+    &__title {
+        font-size: $font-size-500; 
+        font-weight: 600;
+    }
+
+    &__price {
+        font-size: $font-size-700;
+        margin: $spacing-200 0 $spacing-200 0;
+    }
+    
+    &__button {
+        background-color: $secondary;
+        border-radius: $border-radius-100;
+    }
+
+    &__description {
+        margin-left: $spacing-200;
+        margin-right: $spacing-200;
+        max-width: 680px;
+
+        &-title {
+            font-size: $font-size-600;
+            margin-bottom: $spacing-200;
+        }
+
+        &-content {
+            font-size: $font-size-300;
+            padding-bottom: $spacing-200;
+            color:$gray-200
+        }
+    }
+}

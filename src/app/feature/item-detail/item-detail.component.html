@@ -1,17 +1,17 @@
-<div  *ngIf="item">
-    <div style="display: flex;">
+<div *ngIf="item">
+    <div class="d-flex">
         <img src="{{item.picture}}" alt="" width="680" height="680">
-        <div style="margin-top: 32px; margin-right: 32px;">
-            <div style="font-size: 14px; margin-bottom: 16px;">{{item.condition}} - {{item.soldQuantity}} {{item.soldQuantity > 1 ? 'vendidos' : 'vendido'}}</div>
-            <div style="font-size: 24px; font-weight: 600;">{{item.title}}</div>
-            <div style="font-size: 46px; margin-top: 32px; margin-bottom: 32px;">$ {{item.price.amount | currency:'JPY':''}}</div>
+        <div class="item__container">
+            <div class="item__condition">{{item.condition}} - {{item.soldQuantity}} {{item.soldQuantity > 1 ? 'vendidos' : 'vendido'}}</div>
+            <div class="item__title">{{item.title}}</div>
+            <div class="item__price">$ {{item.price.amount | currency:'JPY':''}}</div>
             <div class="d-grid gap-2">
-                <button class="btn btn-primary" style="background-color: #3483fa; border-radius: 4px;">Comprar</button>
+                <button class="btn btn-primary item__button">Comprar</button>
             </div>
         </div>
     </div>
-    <div style="margin-left: 32px; margin-right: 32px; max-width: 680px;">
-        <div style="font-size: 28px;  margin-bottom: 32px;">Descripción del producto</div>
-        <div style="font-size: 16px; padding-bottom: 32px; color:#999999">{{item.description}}</div>
+    <div class="item__description">
+        <div class="item__description-title">Descripción del producto</div>
+        <div class="item__description-content">{{item.description}}</div>
     </div>
 </div>

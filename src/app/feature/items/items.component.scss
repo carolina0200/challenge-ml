@@ -1,19 +1,36 @@
-.item-img {
-    border-radius: 4px;
-}
+@import '/src/theme/variables';
 
-.item-container {
-    display: flex;
-    padding-left: 16px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    cursor: pointer;
-}
+.item {
+    &__container {
+        display: flex;
+        padding: $spacing-100 0 $spacing-100 $spacing-100;
+        cursor: pointer;
+    }
 
-hr {
-    margin: 0;
-    margin-right: 16px;
-    margin-left: 16px;
-    background-color: #eeeeee;
-    opacity: inherit;
+    &__image {
+        margin-right: $spacing-100;
+        & img {
+            border-radius: $border-radius-100;
+        }
+    }
+
+    &__price {
+        margin: $spacing-100 0 $spacing-200 0;
+        font-size: $font-size-500;
+    }
+
+    &__title {
+        font-size: $font-size-400;
+    }
+
+    &__address {
+        font-size: $font-size-100;
+        color: $gray-300;
+    }
+
+    &__divider {
+        margin: 0 $spacing-100 0 $spacing-100;
+        background-color: $gray-100;
+        opacity: inherit;
+    }
 }

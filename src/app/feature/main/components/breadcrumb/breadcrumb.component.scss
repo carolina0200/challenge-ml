@@ -1,5 +1,7 @@
+@import '/src/theme/variables';
+
 .breadcrumbs {
-    font-size: 14px;
-    color: #999999;
-    margin: 16px 0;
+    font-size: $font-size-200;
+    color: $gray-200;
+    margin: $spacing-100 0;
 }
