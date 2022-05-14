@@ -19,6 +19,10 @@ const  routes: Routes = [
       {
         path:  'items/:id',
         loadChildren: () => import('../item-detail/item-detail.module').then(m => m.ItemDetailModule)
+      },
+      {
+        path:  'error',
+        loadChildren: () => import('../../core/error/error.module').then(m => m.ErrorModule)
       }
     ]
   }

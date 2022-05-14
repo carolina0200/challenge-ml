@@ -1,0 +1,6 @@
+<div class="alert alert-warning d-flex align-items-center" role="alert" *ngIf="error$| async">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <div>
+      <b>{{(error$ | async)?.code}}</b> {{(error$ | async)?.message}}
+    </div>
+</div>

@@ -163,9 +163,21 @@
             }
           },
           "defaultConfiguration": "production"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "challenge-meli"
+  "defaultProject": "challenge-meli",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

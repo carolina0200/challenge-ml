@@ -3,8 +3,6 @@ import { Request, Response, NextFunction } from 'express';
 import { author } from 'api/utils/author';
 import { ItemDetailFormat } from 'api/utils/item-detail';
 
-
-
 export class SearchRoute {
     searchRoute(app: any): void {
         app.route('/api/items').get(async (req: Request, res: Response, next: NextFunction) => {
