@@ -1,0 +1,19 @@
+.item-img {
+    border-radius: 4px;
+}
+
+.item-container {
+    display: flex;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    cursor: pointer;
+}
+
+hr {
+    margin: 0;
+    margin-right: 16px;
+    margin-left: 16px;
+    background-color: #eeeeee;
+    opacity: inherit;
+}

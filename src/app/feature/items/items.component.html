@@ -1,8 +1,18 @@
-<div *ngIf="items">
-    <div *ngFor="let item of items">
-        <img src="{{item.picture}}" alt="">
-        <div>{{item.price}}</div>
-        <div>{{item.title}}</div>
-        <div>{{item.freeShipping}}</div>
+<div *ngFor="let item of items; let last = last">
+    <div class="row m-0">
+        <div class="col-md-9 item-container" [routerLink]="['/items', item.id]">
+            <div style="margin-right: 16px;">
+                <img src="{{item.picture}}" alt="" height="180px" width="180px" class="item-img">
+            </div>
+            <div>
+                <div class="item-price" style="margin-top: 16px;margin-bottom: 32px; font-size: 24px;">
+                    $ {{item.price.amount | currency:'JPY':''}}.{{item.price.decimals}}
+                    <img *ngIf="item.freeShipping" src="/assets/ic_shipping.png" alt="">
+                </div>
+                <div style="font-size: 18px;">{{item.title}}</div>
+            </div>
+        </div>
+        <div class="offset-md-1 col-md-2 p-0 mt-5" style="font-size: 12px; color: #666666;">{{item.address}}</div>
     </div>
+    <hr *ngIf="!last" style="margin-right: 16px; margin-left: 16px;">
 </div>

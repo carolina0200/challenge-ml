@@ -5,8 +5,8 @@
         </div>
         <div class="col-md-9">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Nunca dejes de buscar" aria-label="Cajon de busqueda" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2"><img src="/assets/ic_Search.png" alt=""></span>
+                <input type="text" [formControl]="inputSearch" class="form-control" placeholder="Nunca dejes de buscar" aria-label="Cajon de busqueda" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2" [routerLink]="['/items']" [queryParams]="{q: inputSearch.value}"><img src="/assets/ic_Search.png" alt=""></span>
             </div>
         </div>
     </div>

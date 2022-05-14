@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import { response } from 'express';
-import { map, Observable, take } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { selectCategories } from 'src/app/core/store/selectors/categories.selectors';
 import { State } from 'src/app/core/store/store';
 
