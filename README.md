@@ -1,27 +1,27 @@
-# ChallengeMeli
+# Challenge Meli
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-## Development server
+## ❓ Iniciar proyecto localmente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+git clone https://github.com/carolina0200/challenge-ml.git
+```
 
-## Code scaffolding
+Ir a la carpeta `cd challenge-ml`. Ejecutar `npm install` para instalar dependencias necesarias, por ultimo ejecutar `npm run build:serve:ssr` este comando hará el build y subira el servidor por  `http://localhost:4000/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🖥️ Tecnologías utilizadas
 
-## Build
+Se utilizo <b>Angular</b> con <b>Angular Universal</b> para la implementación de las apis y <b>SSR</b>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Pruebas
+Para las pruebas unitarias se utilizo <b>Karma</b> y <b>Jasmine</b>
 
-## Running unit tests
+Para pruebas e2e Se utilizo Selenium IDE en la carpeta `e2e` se puede encontrar el proyecto que exporta el IDE de tipo `.side` y también el `.js` que se exporta para la prueba especifica
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Deploy
+Para el deploy se utiliza `Vercel`.
 
-## Running end-to-end tests
+## Demo
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<iframe src="https://challenge-ml-topaz.vercel.app/" title="demo challenge meli"></iframe>
