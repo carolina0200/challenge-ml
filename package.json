@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build-dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "dev:ssr": "ng run challenge-meli:serve-ssr",
@@ -12,7 +12,8 @@
     "build:ssr": "ng build && ng run challenge-meli:server",
     "prerender": "ng run challenge-meli:prerender",
     "build:serve:ssr": "npm run build:ssr && npm run serve:ssr",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
