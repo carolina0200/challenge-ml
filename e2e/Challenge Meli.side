@@ -1,0 +1,93 @@
+{
+  "id": "1da02c83-b4d9-4b76-a631-afa13989a1b9",
+  "version": "2.0",
+  "name": "Challenge Meli",
+  "url": "http://localhost:4000/",
+  "tests": [{
+    "id": "f17e7752-dcd5-4482-ac39-8bb08e6bd277",
+    "name": "Search items",
+    "commands": [{
+      "id": "b44a0d3c-2e59-40da-853a-fc98f556c456",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edaf64c1-0637-478f-9f78-cc952df603a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "272a1fc6-163b-4717-a24c-fc5a2fb0e9fd",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Celulares"
+    }, {
+      "id": "f8abec8e-f95c-405c-a0ff-84c08ac5ba2a",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-button",
+      "targets": [
+        ["id=search-button", "id"],
+        ["css=#search-button", "css:finder"],
+        ["xpath=//button[@id='search-button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ef3f356-c3d0-456a-a471-f41cece343a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .row > .col-md-9 .item__price",
+      "targets": [
+        ["css=div:nth-child(1) > .row > .col-md-9 .item__price", "css:finder"],
+        ["xpath=//div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3126d208-73ea-4519-a076-b1eadff7e575",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=span > span",
+      "targets": [],
+      "value": "Celulares y Teléfonos >"
+    }, {
+      "id": "b3d47a94-7a3e-4599-8bf3-f00ea75e33a8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.btn-primary",
+      "targets": [],
+      "value": "Comprar"
+    }, {
+      "id": "85f845b0-e662-4957-b236-8e507fb28e41",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.item__description-title",
+      "targets": [],
+      "value": "Descripción del producto"
+    }]
+  }],
+  "suites": [{
+    "id": "534e392c-c0d9-4c3c-b6a6-e7e3a2ea04c1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f17e7752-dcd5-4482-ac39-8bb08e6bd277"]
+  }],
+  "urls": ["http://localhost:4000/"],
+  "plugins": []
+}

@@ -1,27 +1,32 @@
-# Challenge Meli
+# Challenge Frontend Meli
+## Por Carolina Giraldo
 
 Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-## ❓ Iniciar proyecto localmente
+## 🚀 Iniciar proyecto localmente
 
 ```bash
 git clone https://github.com/carolina0200/challenge-ml.git
 ```
 
-Ir a la carpeta `cd challenge-ml`. Ejecutar `npm install` para instalar dependencias necesarias, por ultimo ejecutar `npm run build:serve:ssr` este comando hará el build y subira el servidor por  `http://localhost:4000/`.
+Ir a la carpeta `cd challenge-ml`. Ejecutar `npm install` para instalar dependencias necesarias, por último ejecutar `npm run build:serve:ssr` este comando hará el build y subirá el servidor por  `http://localhost:4000/`.
 
-## 🖥️ Tecnologías utilizadas
+## 🔨 Tecnologías utilizadas
 
-Se utilizo <b>Angular</b> con <b>Angular Universal</b> para la implementación de las apis y <b>SSR</b>
+Se utilizó <b>Angular</b> con <b>Angular Universal</b> para la implementación de las apis y <b>SSR</b>.
 
-### Pruebas
-Para las pruebas unitarias se utilizo <b>Karma</b> y <b>Jasmine</b>
+También se utilizó <b>Rxjs</b> para el manejo de estados de la aplicación.
 
-Para pruebas e2e Se utilizo Selenium IDE en la carpeta `e2e` se puede encontrar el proyecto que exporta el IDE de tipo `.side` y también el `.js` que se exporta para la prueba especifica
+### 🧪 Pruebas
+Para las pruebas unitarias se utilizó <b>Karma</b> y <b>Jasmine</b>
 
-### Deploy
+Para pruebas e2e se utilizó [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd), en la carpeta `e2e` se puede encontrar el proyecto que exporta el IDE de tipo `.side` y también el `.js` que se exporta para la prueba específica
+
+### 🧩 Integración contínua
+Para la integración se utiliza GitHub Actions 
+
+## 🖥️ Demo
+
 Para el deploy se utiliza `Vercel`.
 
-## Demo
-
-<iframe src="https://challenge-ml-topaz.vercel.app/" title="demo challenge meli"></iframe>
+[Aplicación desplegada](https://challenge-ml-topaz.vercel.app/)
