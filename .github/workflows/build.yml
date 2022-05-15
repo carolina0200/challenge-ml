@@ -1,11 +1,11 @@
-name: Build and Deploy
+name: Build
 
 on:
   push:
     branches:
       - master
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,5 +23,8 @@ jobs:
         run: |
           npm install
           npm run-script build
-          npm run-script test
+      - name: Lint
           npm run-script lint
+      - name: Test
+          npm run-script test
+          
