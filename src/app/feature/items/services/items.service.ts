@@ -12,7 +12,7 @@ export class ItemsService {
 
   constructor(private http: HttpClient, private store: Store<State>) { }
 
-  getItemDetail(input: string): Observable<IItemDetail[]> {
+  getItems(input: string): Observable<IItemDetail[]> {
     const queryParams = new HttpParams().append("q",input);
     return this.http.get<ISearch>(`/api/items`, {params: queryParams}).pipe(
       tap(response => this.store.dispatch(updateCategories({payload: response.categories}))),

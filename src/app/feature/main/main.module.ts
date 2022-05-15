@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const  routes: Routes = [
@@ -34,6 +34,7 @@ const  routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   exports: [RouterModule]

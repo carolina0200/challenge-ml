@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "dev:ssr": "ng run challenge-meli:serve-ssr",
     "serve:ssr": "node dist/challenge-meli/server/main.js",
     "build:ssr": "ng build && ng run challenge-meli:server",

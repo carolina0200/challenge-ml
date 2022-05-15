@@ -18,7 +18,7 @@ export class ItemsComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(async params => {
       const search = params['q'];
-      this.items = await firstValueFrom(this.itemsService.getItemDetail(search))
+      this.items = await firstValueFrom(this.itemsService.getItems(search))
     });
   }
 

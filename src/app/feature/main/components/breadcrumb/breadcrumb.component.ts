@@ -15,7 +15,7 @@ export class BreadcrumbComponent implements OnInit {
 
   constructor(private store: Store<State>) { }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.categories$ = this.store.select(selectCategories);
   }
 
