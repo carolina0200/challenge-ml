@@ -1,7 +1,7 @@
 <div *ngIf="item">
-    <div class="d-flex">
-        <img src="{{item.picture}}" alt="" width="680" height="680">
-        <div class="item__container">
+    <div class="d-flex flex-column flex-sm-row">
+        <img src="{{item.picture}}" alt="{{item.title}}" width="680" height="680">
+        <div class="item__container ms-4 ms-sm-0 mb-2 mb-sm-0">
             <div class="item__condition">{{item.condition}} - {{item.soldQuantity}} {{item.soldQuantity > 1 ? 'vendidos' : 'vendido'}}</div>
             <div class="item__title">{{item.title}}</div>
             <div class="item__price">$ {{item.price.amount | currency:'JPY':''}}</div>
